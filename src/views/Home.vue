@@ -151,35 +151,48 @@
             <v-col cols="auto" class="text-center pl-0">
               <v-row class="flex-column ma-0 fill-height" justify="center">
                 <v-col class="px-0">
-                    <v-icon color="blue">mdi-handshake mdi-48px</v-icon>
+                  <v-icon color="blue">mdi-handshake mdi-48px</v-icon>
                 </v-col>
                 <v-col class="px-0">
-                    <span class="title font-weight-light">Volunteering</span>
-                </v-col>
-
-                <v-col class="px-0">
-                    <v-icon color="blue">mdi-run-fast mdi-48px</v-icon>
-                </v-col>
-                <v-col class="px-0">
-                    <span class="title font-weight-light">Athletics</span>
+                  <span class="title font-weight-light">Volunteering</span>
                 </v-col>
 
                 <v-col class="px-0">
-                    <v-icon color="blue">mdi-airplane mdi-48px</v-icon>
+                  <v-icon color="blue">mdi-run-fast mdi-48px</v-icon>
                 </v-col>
                 <v-col class="px-0">
-                    <span class="title font-weight-light">Travel</span>
+                  <span class="title font-weight-light">Athletics</span>
                 </v-col>
-                
+
                 <v-col class="px-0">
-                    <v-icon color="blue">mdi-bike mdi-48px</v-icon>
+                  <v-icon color="blue">mdi-airplane mdi-48px</v-icon>
                 </v-col>
                 <v-col class="px-0">
-                    <span class="title font-weight-light">Cycling</span>
+                  <span class="title font-weight-light">Travel</span>
+                </v-col>
+
+                <v-col class="px-0">
+                  <v-icon color="blue">mdi-bike mdi-48px</v-icon>
+                </v-col>
+                <v-col class="px-0">
+                  <span class="title font-weight-light">Cycling</span>
                 </v-col>
               </v-row>
             </v-col>
           </v-img>
+        </v-card>
+      </div>
+
+      <div
+        class="mx-auto col-md-12 col-sm-12 col-xs-12"
+        max-width="344"
+        outlined
+      >
+        <v-card class="pa-4 white--text text-center" color="grey">
+          <v-btn icon @click="$vuetify.goTo(1, easeInOutCubic)">
+            <v-icon>mdi-arrow-up-bold-circle-outline</v-icon>
+            <span class="title font-weight-light">Back to Top</span>
+          </v-btn>
         </v-card>
       </div>
     </div>
