@@ -1,5 +1,7 @@
 # portfolio_vue
 
+Create my Portfolio using Vue JS
+
 ## Project setup
 ```
 npm install

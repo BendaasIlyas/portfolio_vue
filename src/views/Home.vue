@@ -140,6 +140,48 @@
           <v-divider inset></v-divider>
         </v-card>
       </div>
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <v-card text--center>
+          <v-img
+            :src="require('@/assets/images/thumbnail_20191208_140522-01.jpg')"
+            class="white--text align-center"
+            gradient="rgba(0,0,0,.1), rgba(0,0,0,.5)"
+            height="600px"
+          >
+            <v-col cols="auto" class="text-center pl-0">
+              <v-row class="flex-column ma-0 fill-height" justify="center">
+                <v-col class="px-0">
+                    <v-icon color="blue">mdi-handshake mdi-48px</v-icon>
+                </v-col>
+                <v-col class="px-0">
+                    <span class="title font-weight-light">Volunteering</span>
+                </v-col>
+
+                <v-col class="px-0">
+                    <v-icon color="blue">mdi-run-fast mdi-48px</v-icon>
+                </v-col>
+                <v-col class="px-0">
+                    <span class="title font-weight-light">Athletics</span>
+                </v-col>
+
+                <v-col class="px-0">
+                    <v-icon color="blue">mdi-airplane mdi-48px</v-icon>
+                </v-col>
+                <v-col class="px-0">
+                    <span class="title font-weight-light">Travel</span>
+                </v-col>
+                
+                <v-col class="px-0">
+                    <v-icon color="blue">mdi-bike mdi-48px</v-icon>
+                </v-col>
+                <v-col class="px-0">
+                    <span class="title font-weight-light">Cycling</span>
+                </v-col>
+              </v-row>
+            </v-col>
+          </v-img>
+        </v-card>
+      </div>
     </div>
   </div>
 </template>
@@ -152,7 +194,8 @@ export default {};
 .bg {
   width: 100%;
   height: auto;
-  background: url("../assets/images/apple-coffee-computer-cup-459653-min.jpg") no-repeat center center;
+  background: url("../assets/images/apple-coffee-computer-cup-459653-min.jpg")
+    no-repeat center center;
   background-size: 100% 100%;
   box-sizing: inherit;
 }
