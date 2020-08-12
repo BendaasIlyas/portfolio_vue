@@ -1,12 +1,19 @@
 <template>
   <div class="education">
+    <v-parallax
+    id="img1"
+    dark
+    height="800"
+    src="@/assets/images/text-on-shelf-256417-min.jpg"
+    jumbotron
+  >
     <v-snackbar v-model="snackbar" timeout="4000" top color="success">
       <span>You Added a new item</span>
       <v-btn text color="white" @click="snackbar = false">Close</v-btn>
     </v-snackbar>
     <h1 class="subheading grey--text">Education</h1>
     <v-flex class="mt-4 mb-3">
-      <Add_new @addedNew ="snackbar = true"/>
+      <Add_new @addedNewEd ="snackbar = true"/>
     </v-flex>
     <v-container class="my-5">
       <v-card text class="pa-5 ma-3" v-for="ed in educations" :key="ed.title">
@@ -45,6 +52,7 @@
         </v-layout>
       </v-card>
     </v-container>
+    </v-parallax>
   </div>
 </template>
 

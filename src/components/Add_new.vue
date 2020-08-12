@@ -103,17 +103,23 @@ export default {
       if (this.$refs.form.validate()) {
         this.loading = true;
 
-        const experience = {
+        const newItem = {
           title: this.title,
           company: this.company,
           date: this.date,
           mission: this.mission
         }
 
-        db.collection('experiences').add(experience).then(() => {
+        db.collection('experiences').add(newItem).then(() => {
           this.loading = false;
           this.dialog = false;
-          this.$emit('addedNew');
+          this.$emit('addedNewEx');
+        });
+
+        db.collection('educations').add(newItem).then(() => {
+          this.loading = false;
+          this.dialog = false;
+          this.$emit('addedNewEd');
         });
       }
     },

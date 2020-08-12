@@ -1,7 +1,6 @@
 <template>
-  <v-card class="mx-auto" width="256" tile>
-
-    <v-app-bar flat app>
+  <v-card class="mx-auto overflow-hidden" width="256" tile>
+    <v-app-bar flat app color="transparent" dark id="inspire">
       <v-app-bar-nav-icon
         class="grey--text"
         @click="drawer = !drawer"
@@ -11,14 +10,9 @@
         <span>Engineer</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      
+
       <div v-for="link in links" :key="link.text">
-        <v-btn
-          color="primary"
-          dark
-          router
-          :to="link.route"
-        >
+        <v-btn color="primary" dark router :to="link.route">
           {{ link.text }}
         </v-btn>
       </div>
@@ -106,3 +100,9 @@ export default {
   },
 };
 </script>
+
+<style>
+#inspire {
+  background: none;
+}
+</style>
