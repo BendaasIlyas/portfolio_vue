@@ -1,6 +1,6 @@
 <template>
   <v-card class="mx-auto overflow-hidden" width="256" tile>
-    <v-app-bar flat app color="transparent" dark id="inspire">
+    <v-app-bar flat app color="transparent" dark id="inspire" hide-on-scroll>
       <v-app-bar-nav-icon
         class="grey--text"
         @click="drawer = !drawer"
@@ -16,6 +16,7 @@
           {{ link.text }}
         </v-btn>
       </div>
+      
     </v-app-bar>
 
     <v-navigation-drawer app v-model="drawer">

@@ -69,12 +69,11 @@
       >
         <v-card class="pa-8 white--text text-center" color="grey">
           <h1>SKILLS</h1>
-          <v-divider inset></v-divider>
         </v-card>
       </div>
       <div class="col-md-12 col-sm-12 col-xs-12">
-        <v-carousel class="bg" height="500" :show-arrows="false">
-          <v-carousel-item class="bg1">
+        <v-carousel cycle="2000" class="bg" height="500" :show-arrows="false">
+          <v-carousel-item class="bg1 text-justify pa-8">
             <v-row class="fill-height" align="center" justify="right">
               <div class="display-1 grey--text pl-5 pr-5 ">
                 <strong class="white--text">PROGRAMMING</strong>
@@ -89,7 +88,7 @@
               <br />
             </v-row>
           </v-carousel-item>
-          <v-carousel-item class="bg2">
+          <v-carousel-item class="bg2 text-justify pa-8">
             <v-row class="fill-height" align="center" justify="right">
               <div class="display-1 grey--text pl-5 pr-5 ">
                 <strong class="white--text">OPERATING SYSTEMS</strong>
@@ -102,7 +101,7 @@
               <br />
             </v-row>
           </v-carousel-item>
-          <v-carousel-item class="bg3">
+          <v-carousel-item class="bg3 text-justify pa-8">
             <v-row class="fill-height" align="center" justify="right">
               <div class="display-1 grey--text pl-5 pr-5 ">
                 <strong class="white--text">NETWORK</strong>
@@ -115,7 +114,7 @@
               <br />
             </v-row>
           </v-carousel-item>
-          <v-carousel-item class="bg4">
+          <v-carousel-item class="bg4 text-justify pa-8">
             <v-row class="fill-height" align="center" justify="right">
               <div class="display-1 grey--text pl-5 pr-5 ">
                 <strong class="white--text">SYSTEMS</strong>
@@ -137,7 +136,6 @@
       >
         <v-card class="pa-8 white--text text-center" color="grey">
           <h1>HOBBIES</h1>
-          <v-divider inset></v-divider>
         </v-card>
       </div>
       <div class="col-md-12 col-sm-12 col-xs-12">
@@ -189,7 +187,7 @@
         outlined
       >
         <v-card class="pa-4 white--text text-center" color="grey">
-          <v-btn icon @click="$vuetify.goTo(1, easeInOutCubic)">
+          <v-btn icon @click="$vuetify.goTo(0, easeInOutCubic)">
             <v-icon>mdi-arrow-up-bold-circle-outline</v-icon>
             <span class="title font-weight-light">Back to Top</span>
           </v-btn>

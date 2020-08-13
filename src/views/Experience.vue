@@ -1,7 +1,6 @@
 <template>
   <div class="experience">
     <v-parallax
-      id="img1"
       dark
       height="800"
       src="@/assets/images/black-flat-screen-computer-monitor-1714208-min.jpg"

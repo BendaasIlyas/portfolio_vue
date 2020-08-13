@@ -5,19 +5,63 @@
     <v-main class="mx-4 mb-4">
       <router-view></router-view>
     </v-main>
+    <v-btn
+      v-scroll="onScroll"
+      v-show="fab"
+      class="md-5 mr-3 elevation-21"
+      dark
+      fab
+      bottom
+      right
+      color="primary darken-3"
+      fixed
+      @click="top"
+    >
+      <v-icon>mdi-arrow-up-bold-circle-outline</v-icon>
+    </v-btn>
   </v-app>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar';
+import Navbar from "@/components/Navbar";
 
 export default {
-  name: 'App',
-  components: {
-    Navbar
+  name: "App",
+  data() {
+    return {
+      fab: false,
+    };
   },
-  data: () => ({
-    //
-  }),
+  components: {
+    Navbar,
+  },
+  methods: {
+    top() {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    },
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > 20;
+    },
+    toTop() {
+      this.$vuetify.goTo(0);
+    },
+  },
 };
 </script>
+
+<style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  /* margin-top: 60px; */
+}
+</style>
