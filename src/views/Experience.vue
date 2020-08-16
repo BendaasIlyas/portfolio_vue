@@ -49,7 +49,26 @@
             <v-flex xs12 sm4 md3>
               <div>
                 <v-chip small>
-                  {{ exp.mission }}
+                  <v-dialog v-model="dialog" width="500">
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn
+                        color="green lighten-2"
+                        dark
+                        v-bind="attrs"
+                        v-on="on"
+                      >
+                        MISSION
+                      </v-btn>
+                    </template>
+                    <v-card>
+                      <v-card-title class="headline grey lighten-2">
+                        MISSION in {{ exp.company }}
+                      </v-card-title>
+                      <v-card-text>
+                        {{ exp.mission }}
+                      </v-card-text>
+                    </v-card>
+                  </v-dialog>
                 </v-chip>
               </div>
             </v-flex>

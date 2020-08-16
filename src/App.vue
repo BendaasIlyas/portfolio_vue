@@ -1,5 +1,5 @@
 <template>
-  <v-app class="grey lighten--4">
+  <v-app class="grey lighten--4" id="inspire">
     <Navbar />
 
     <v-main class="mx-4 mb-4">
@@ -68,5 +68,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   /* margin-top: 60px; */
+}
+#inspire {
+  height: 100vh;
 }
 </style>

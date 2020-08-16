@@ -77,12 +77,12 @@
             <v-row class="fill-height" align="center" justify="right">
               <div class="display-1 grey--text pl-5 pr-5 ">
                 <strong class="white--text">PROGRAMMING</strong>
-                <p class="grey--text display-1 d-none d-sm-flex">
+                <p class="grey--text display-1">
                   PYTHON<br />
                   WORDPRESS<br />
-                  HTML<br />
-                  CSS<br />
-                  JAVASCRIPT
+                  JAVASCRIPT<br />
+                  LARAVEL<br />
+                  VUE JS
                 </p>
               </div>
               <br />
@@ -92,7 +92,7 @@
             <v-row class="fill-height" align="center" justify="right">
               <div class="display-1 grey--text pl-5 pr-5 ">
                 <strong class="white--text">OPERATING SYSTEMS</strong>
-                <p class="grey--text display-1 d-none d-sm-flex">
+                <p class="grey--text display-1">
                   CISCO IOS<br />
                   WINDOWS<br />
                   LINUX
@@ -105,10 +105,10 @@
             <v-row class="fill-height" align="center" justify="right">
               <div class="display-1 grey--text pl-5 pr-5 ">
                 <strong class="white--text">NETWORK</strong>
-                <p class="grey--text display-1 d-none d-sm-flex">
+                <p class="grey--text display-1">
                   ROUTING PROTOCOLS<br />
                   Switching(VLAN, STP, VTP …)<br />
-                  Others (SDN, DNS, DHCP, TCP/IP, ACL,IPV6 …)
+                  Others(SDN, DNS ,DHCP,TCP/IP ,ACL,IPV6 …)
                 </p>
               </div>
               <br />
@@ -118,7 +118,7 @@
             <v-row class="fill-height" align="center" justify="right">
               <div class="display-1 grey--text pl-5 pr-5 ">
                 <strong class="white--text">SYSTEMS</strong>
-                <p class="grey--text display-1 d-none d-sm-flex">
+                <p class="grey--text display-1">
                   WINDOWS SERVER<br />
                   PFSENSE<br />
                   NAGIOS
@@ -205,11 +205,12 @@ export default {};
 .bg {
   width: 100%;
   height: auto;
-  background: url("../assets/images/apple-coffee-computer-cup-459653-min.jpg")
+  background: linear-gradient(to left, transparent, black),url("../assets/images/apple-coffee-computer-cup-459653-min.jpg")
     no-repeat center center;
   background-size: 100% 100%;
   box-sizing: inherit;
 }
+@media (min-width: 992px){
 .bg1 {
   width: 100%;
   height: auto;
@@ -237,5 +238,6 @@ export default {};
   background: url("../assets/images/image4.png") no-repeat center center;
   background-size: 100% 100%;
   box-sizing: inherit;
+}
 }
 </style>

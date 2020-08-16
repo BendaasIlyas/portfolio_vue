@@ -11,8 +11,7 @@
           {{ new Date().getFullYear() }} — ILYAS BENDAAS. All rights
           reserved.</strong
         >
-        <v-btn v-for="icon in icons" :key="icon" class="mx-4 grey--text" icon>
-          <!-- <v-icon size="24px">{{ icon }}</v-icon> -->
+        <v-btn v-for="icon in icons" :key="icon" class="mx-3 grey--text" icon>
           <a :href="icon.url" :target="icon.target"
             ><v-icon size="24px">{{ icon.name }}</v-icon></a
           >
