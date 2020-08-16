@@ -19,11 +19,15 @@
     >
       <v-icon>mdi-arrow-up-bold-circle-outline</v-icon>
     </v-btn>
+
+    <Footer />>
+
   </v-app>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default {
   name: "App",
@@ -34,6 +38,7 @@ export default {
   },
   components: {
     Navbar,
+    Footer,
   },
   methods: {
     top() {

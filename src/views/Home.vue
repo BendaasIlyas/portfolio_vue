@@ -186,8 +186,8 @@
         max-width="344"
         outlined
       >
-        <v-card class="pa-4 white--text text-center" color="grey">
-          <v-btn icon @click="$vuetify.goTo(0, easeInOutCubic)">
+        <v-card class="pa-4 white--text text-center" color="#1c1c1c">
+          <v-btn class="white--text" icon @click="$vuetify.goTo(0, easeInOutCubic)">
             <v-icon>mdi-arrow-up-bold-circle-outline</v-icon>
             <span class="title font-weight-light">Back to Top</span>
           </v-btn>
