@@ -2,15 +2,14 @@
   <div class="experience">
     <v-parallax
       dark
-      height="800"
-      src="@/assets/images/black-flat-screen-computer-monitor-1714208-min.jpg"
+      height="100%"
+      class="bgex"
       jumbotron
     >
       <v-snackbar v-model="snackbar" timeout="4000" top color="success">
         <span>You Added a new item</span>
         <v-btn text color="white" @click="snackbar = false">Close</v-btn>
       </v-snackbar>
-      <h1 class="subheading grey--text">Experience</h1>
       <v-flex class="mt-4 mb-3">
         <Add_new @addedNewEx="snackbar = true" />
       </v-flex>
@@ -20,39 +19,40 @@
           class="pa-5 ma-3"
           v-for="exp in experiences"
           :key="exp.title"
+          color="transparent"
         >
-          <v-layout row wrap>
+          <v-layout row wrap class="caption blue--text">
             <v-flex xs12 md3>
-              <div class="caption grey--text">
-                Company
+              <div >
+                <h1> Company</h1>
               </div>
-              <div>
-                {{ exp.company }}
-              </div>
-            </v-flex>
-            <v-flex xs12 sm4 md3>
-              <div class="caption grey--text">
-                Job Title
-              </div>
-              <div>
-                {{ exp.title }}
-              </div>
-            </v-flex>
-            <v-flex xs12 sm4 md3>
-              <div class="caption grey--text">
-                Date
-              </div>
-              <div>
-                {{ exp.date }}
+              <div class="white--text">
+                <h3> {{ exp.company }} </h3>
               </div>
             </v-flex>
             <v-flex xs12 sm4 md3>
               <div>
-                <v-chip small>
+                <h1> Job Title</h1>
+              </div>
+              <div class="white--text">
+                <h3> {{ exp.title }} </h3>
+              </div>
+            </v-flex>
+            <v-flex xs12 sm4 md3>
+              <div>
+                <h1> Date</h1>
+              </div>
+              <div class="white--text">
+                <h3> {{ exp.date }} </h3>
+              </div>
+            </v-flex>
+            <v-flex xs12 sm4 md3>
+              <div>
+                <v-chip small color="green">
                   <v-dialog v-model="dialog" width="500">
                     <template v-slot:activator="{ on, attrs }">
                       <v-btn
-                        color="green lighten-2"
+                        color="green"
                         dark
                         v-bind="attrs"
                         v-on="on"
@@ -110,3 +110,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.bgex {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to left, transparent, black),url("../assets/images/black-flat-screen-computer-monitor-1714208-min.jpg")
+    no-repeat center center;
+  background-size: 100% 100%;
+  box-sizing: inherit;
+}
+</style>

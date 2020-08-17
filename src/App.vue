@@ -2,7 +2,7 @@
   <v-app class="grey lighten--4" id="inspire">
     <Navbar />
 
-    <v-main class="mx-4 mb-4">
+    <v-main>
       <router-view></router-view>
     </v-main>
     <v-btn
@@ -20,7 +20,7 @@
       <v-icon>mdi-arrow-up-bold-circle-outline</v-icon>
     </v-btn>
 
-    <Footer />>
+    <Footer />
 
   </v-app>
 </template>
@@ -30,7 +30,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default {
-  name: "App",
   data() {
     return {
       fab: false,
@@ -61,14 +60,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  /* margin-top: 60px; */
-}
 #inspire {
   height: 100vh;
 }

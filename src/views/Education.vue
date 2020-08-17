@@ -2,65 +2,65 @@
   <div class="education">
     <v-parallax
       dark
-      height="800"
-      src="@/assets/images/text-on-shelf-256417-min.jpg"
+      height="100%"
+      class="bged"
       jumbotron
     >
       <v-snackbar v-model="snackbar" timeout="4000" top color="success">
         <span>You Added a new item</span>
         <v-btn text color="white" @click="snackbar = false">Close</v-btn>
       </v-snackbar>
-      <h1 class="subheading grey--text">Education</h1>
       <v-flex class="mt-4 mb-3">
         <Add_new @addedNewEd="snackbar = true" />
       </v-flex>
       <v-container class="my-5">
-        <v-card text class="pa-5 ma-3" v-for="ed in educations" :key="ed.title">
-          <v-layout row wrap>
+        <v-card
+          text
+          class="pa-5 ma-3"
+          v-for="edu in educations"
+          :key="edu.title"
+          color="transparent"
+        >
+          <v-layout row wrap class="caption blue--text">
             <v-flex xs12 md3>
-              <div class="caption grey--text">
-                Company
+              <div >
+                <h1> Company </h1>
               </div>
-              <div>
-                {{ ed.company }}
-              </div>
-            </v-flex>
-            <v-flex xs12 sm4 md3>
-              <div class="caption grey--text">
-                Job Title
-              </div>
-              <div>
-                {{ ed.title }}
+              <div class="white--text">
+                <h3> {{ edu.company }} </h3>
               </div>
             </v-flex>
             <v-flex xs12 sm4 md3>
-              <div class="caption grey--text">
-                Date
+              <div >
+                <h1> Job Title </h1>
               </div>
-              <div>
-                {{ ed.date }}
+              <div class="white--text">
+                <h3> {{ edu.title }} </h3>
               </div>
             </v-flex>
             <v-flex xs12 sm4 md3>
               <div>
-                <v-chip small>
+                <h1> Date </h1>
+              </div>
+              <div class="white--text">
+                <h3> {{ edu.date }} </h3>
+              </div>
+            </v-flex>
+            <v-flex xs12 sm4 md3>
+              <div>
+                <v-chip small color="green">
                   <v-dialog v-model="dialog" width="500">
                     <template v-slot:activator="{ on, attrs }">
-                      <v-btn
-                        color="green lighten-2"
-                        dark
-                        v-bind="attrs"
-                        v-on="on"
-                      >
+                      <v-btn color="green" dark v-bind="attrs" v-on="on">
                         MISSION
                       </v-btn>
                     </template>
                     <v-card>
                       <v-card-title class="headline grey lighten-2">
-                        MISSION in {{ ed.company }}
+                        MISSION in {{ edu.company }}
                       </v-card-title>
                       <v-card-text>
-                        {{ ed.mission }}
+                        {{ edu.mission }}
                       </v-card-text>
                     </v-card>
                   </v-dialog>
@@ -105,3 +105,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.bged {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to left, transparent, black),url("../assets/images/text-on-shelf-256417-min.jpg")
+    no-repeat center center;
+  background-size: 100% 100%;
+  box-sizing: inherit;
+}
+</style>

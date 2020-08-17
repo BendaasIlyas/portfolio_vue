@@ -25,7 +25,7 @@
       </v-card>
     </div>
 
-    <div class="pl-4 pr-4 row">
+    <div class="row">
       <div class="col-md-6 col-sm-6 col-xs-12">
         <v-card>
           <v-img
@@ -63,7 +63,7 @@
         </v-card>
       </div>
       <div
-        class="mx-auto col-md-12 col-sm-12 col-xs-12"
+        class="col-md-12 col-sm-12 col-xs-12"
         max-width="344"
         outlined
       >
@@ -130,7 +130,7 @@
         </v-carousel>
       </div>
       <div
-        class="mx-auto col-md-12 col-sm-12 col-xs-12"
+        class="col-md-12 col-sm-12 col-xs-12"
         max-width="344"
         outlined
       >
@@ -182,7 +182,7 @@
       </div>
 
       <div
-        class="mx-auto col-md-12 col-sm-12 col-xs-12"
+        class="col-md-12 col-sm-12 col-xs-12"
         max-width="344"
         outlined
       >

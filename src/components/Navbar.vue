@@ -81,7 +81,7 @@ export default {
           text: "Experience",
           route: "/experience",
         },
-        { icon: "mdi-cast-education", text: "Exducation", route: "/education" },
+        { icon: "mdi-cast-education", text: "Education", route: "/education" },
         { icon: "mdi-contacts", text: "Contact", route: "/contact" },
       ],
       sublinks: [
