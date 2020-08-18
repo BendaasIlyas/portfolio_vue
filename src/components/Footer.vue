@@ -3,7 +3,7 @@
     <v-card
       flat
       tile
-      class="#0c0c0c lighten-1 grey--text text-center col-md-12 col-sm-12 col-xs-12"
+      class="black lighten-1 grey--text text-center col-md-12 col-sm-12 col-xs-12"
     >
       <v-card-text>
         <v-icon>mdi-copyright</v-icon>

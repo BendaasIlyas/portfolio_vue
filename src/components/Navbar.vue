@@ -11,8 +11,8 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
-      <div v-for="link in links" :key="link.text">
-        <v-btn color="primary" dark router :to="link.route">
+      <div v-for="link in links" :key="link.text" class="d-none d-md-flex">
+        <v-btn color="transparent" dark router :to="link.route">
           {{ link.text }}
         </v-btn>
       </div>

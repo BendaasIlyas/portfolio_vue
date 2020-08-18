@@ -10,10 +10,10 @@
         <span>You Added a new item</span>
         <v-btn text color="white" @click="snackbar = false">Close</v-btn>
       </v-snackbar>
-      <v-flex class="mt-4 mb-3">
+      <v-flex class="mt-16 mb-3 mr-4">
         <Add_new @addedNewEd="snackbar = true" />
       </v-flex>
-      <v-container class="my-5">
+      <v-container class="my-5 pa-0">
         <v-card
           text
           class="pa-5 ma-3"

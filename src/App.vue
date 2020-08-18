@@ -2,7 +2,7 @@
   <v-app class="grey lighten--4" id="inspire">
     <Navbar />
 
-    <v-main>
+    <v-main class="pt-0">
       <router-view></router-view>
     </v-main>
     <v-btn

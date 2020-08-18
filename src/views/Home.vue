@@ -9,11 +9,11 @@
       </v-row>
     </section> -->
 
-    <div class="col-md-12 col-sm-12 col-xs-12">
+    <div>
       <v-card>
         <v-img
           :src="require('@/assets/images/IMG_20180324_120523-min.jpg')"
-          class="white--text align-center"
+          class="white--text align-center pa-0"
           gradient="rgba(0,0,0,.1), rgba(0,0,0,.5)"
           height="100%"
         >
@@ -26,7 +26,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="col-md-6 col-sm-6 col-xs-12 pa-0">
         <v-card>
           <v-img
             :src="require('@/assets/images/IMG_1737-min.jpg')"
@@ -35,7 +35,7 @@
           </v-img>
         </v-card>
       </div>
-      <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="col-md-6 col-sm-6 col-xs-12 pa-0">
         <v-card text--center>
           <v-img
             :src="require('@/assets/images/IMG-20190802-WA0018.jpg')"
@@ -57,21 +57,21 @@
               leadership skills.
             </v-card-text>
             <v-card-actions class="text-center text-justify">
-              <v-btn href="#" class="white--text" outlined>Resume</v-btn>
+              <v-btn @click="open" class="white--text" outlined>Resume</v-btn>
             </v-card-actions>
           </v-img>
         </v-card>
       </div>
       <div
-        class="col-md-12 col-sm-12 col-xs-12"
+        class="col-md-12 col-sm-12 col-xs-12 pa-0"
         max-width="344"
         outlined
       >
-        <v-card class="pa-8 white--text text-center" color="grey">
+        <v-card class="pa-8 white--text text-center" color="#4f4f4f">
           <h1>SKILLS</h1>
         </v-card>
       </div>
-      <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="col-md-12 col-sm-12 col-xs-12 pa-0">
         <v-carousel cycle="2000" class="bg" height="500" :show-arrows="false">
           <v-carousel-item class="bg1 text-justify pa-8">
             <v-row class="fill-height" align="center" justify="right">
@@ -130,15 +130,15 @@
         </v-carousel>
       </div>
       <div
-        class="col-md-12 col-sm-12 col-xs-12"
+        class="col-md-12 col-sm-12 col-xs-12 pa-0"
         max-width="344"
         outlined
       >
-        <v-card class="pa-8 white--text text-center" color="grey">
+        <v-card class="pa-8 white--text text-center" color="#4f4f4f">
           <h1>HOBBIES</h1>
         </v-card>
       </div>
-      <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="col-md-12 col-sm-12 col-xs-12 pa-0">
         <v-card text--center>
           <v-img
             :src="require('@/assets/images/thumbnail_20191208_140522-01.jpg')"
@@ -182,7 +182,7 @@
       </div>
 
       <div
-        class="col-md-12 col-sm-12 col-xs-12"
+        class="col-md-12 col-sm-12 col-xs-12 pa-0"
         max-width="344"
         outlined
       >
@@ -198,7 +198,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+  open() {
+     window.open('@/assets/ILYAS_BENDAAS.pdf', '_blank') //to open in new tab
+   }
+}
+};
 </script>
 
 <style>
