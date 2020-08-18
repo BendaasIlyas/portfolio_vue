@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import db from '@/fb';
+import db from "@/fb";
 
 export default {
   data() {
@@ -86,16 +86,16 @@ export default {
       companyRules: [
         (v) => !!v || "Name of company is required",
         (v) =>
-          (v && v.length <= 20) ||
+          (v && v.length <= 50) ||
           "Name of company must be less than 20 characters",
       ],
       jobRules: [
         (v) => !!v || "Job title is required",
         (v) =>
-          (v && v.length <= 20) || "Job title must be less than 20 characters",
+          (v && v.length <= 50) || "Job title must be less than 20 characters",
       ],
       missionRules: [(v) => !!v || "Job Mission is required"],
-      loading: false
+      loading: false,
     };
   },
   methods: {
@@ -107,20 +107,32 @@ export default {
           title: this.title,
           company: this.company,
           date: this.date,
-          mission: this.mission
-        }
+          mission: this.mission,
+        };
 
-        db.collection('experiences').add(newItem).then(() => {
-          this.loading = false;
-          this.dialog = false;
-          this.$emit('addedNewEx');
-        });
+        db.collection("experiences")
+          .add(newItem)
+          .then(() => {
+            this.loading = false;
+            this.dialog = false;
+            this.title = "";
+            this.company = "";
+            this.date = new Date().toISOString().substr(0, 10);
+            this.mission = "";
+            this.$emit("addedNewEx");
+          });
 
-        db.collection('educations').add(newItem).then(() => {
-          this.loading = false;
-          this.dialog = false;
-          this.$emit('addedNewEd');
-        });
+        db.collection("educations")
+          .add(newItem)
+          .then(() => {
+            this.loading = false;
+            this.dialog = false;
+            this.title = "";
+            this.company = "";
+            this.date = new Date().toISOString().substr(0, 10);
+            this.mission = "";
+            this.$emit("addedNewEd");
+          });
       }
     },
   },
